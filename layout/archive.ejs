@@ -1,0 +1,18 @@
+<%
+    var title = '';
+    if (page.category) title = page.category;
+    if (page.tag) title = "#" + page.tag;
+    if (page.archive) {
+        if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+        else title = __('archive_a');
+    }
+%>
+
+<!-- Main Content -->
+<!-- This is used to generate lists from tags and categories. -->
+<% page.posts.each(function(item){ %>
+    <%- partial('_partial/content-list', {item: item}) %>
+<% }); %>
+
+<!-- Paginator -->
+<%- partial('_partial/pagination') %>

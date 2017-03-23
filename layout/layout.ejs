@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html <% if(config.language) { %>lang="<%= config.language %>"<% } else { %>lang="en"<% }%>>
+
+	<!-- html head tag -->
+	<%- partial('_partial/html/header') %>
+
+	<body>
+
+		<!-- Header -->
+		<%- partial('_partial/page-header') %>
+		
+		<!-- Menu -->
+		<%- partial('_partial/menu') %>
+
+		<!-- Main Content -->
+		<%- body %>
+
+		<p>Theme Edit</p>
+
+		<!-- Footer -->
+		<%- partial('_partial/page-footer') %>
+
+		<!-- html footer scripts -->
+		<%- partial('_partial/html/footer') %>
+
+	</body>
+
+</html>

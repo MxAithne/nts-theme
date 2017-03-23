@@ -1,0 +1,46 @@
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<%- partial('metadata') %>
+
+	<script src="https://use.typekit.net/yfm5nfm.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+	<!-- Title -->
+	<%
+	var title = [];
+	if (page.current > 1) title.push(__('page', page.current));
+	if (page.title) title.push(page.title);
+	if (page.category) title.push(page.category);
+	if (page.tag) title.push(page.tag);
+	if (page.archive)
+	{
+		if (page.year) title.push(__('archive_b', page.year + (page.month ? '/' + page.month : '')));
+		else title.push(__('archive_a'));
+	}
+	title.push(config.title);
+	%>
+	<title><%= title.join(' - ') %></title>
+
+	<!-- Custom CSS -->
+	<%- css('css/style.css') %>
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Google Analytics -->
+	<%- partial('google-analytics') %>
+
+	<!-- favicon -->
+	<% if (theme.favicon){ %>
+	<link rel="icon" href="<%- theme.favicon %>">
+	<% } %>
+	
+</head>
