@@ -1,0 +1,164 @@
+/* Globals */
+
+body
+{
+	font-family: "ff-netto-web";
+	min-width: 320px;
+	line-height: 1.5;
+}
+
+.page-width
+{
+	max-width: 640px;
+}
+
+.page-centre
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hoz-rule
+{
+	max-width: 960px;
+	height: 8px;
+	opacity: 0.3;
+	border-radius: 4px;
+	margin-left: auto;
+	margin-right: auto;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff00ff+0,0000ff+100 */
+	background: rgb(255,0,255); /* Old browsers */
+	background: -moz-linear-gradient(left, rgba(255,0,255,1) 0%, rgba(0,0,255,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(255,0,255,1) 0%,rgba(0,0,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(255,0,255,1) 0%,rgba(0,0,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', endColorstr='#0000ff',GradientType=1 ); /* IE6-9 */
+}
+
+/* Page Header */
+
+header
+{
+	line-height: 1;
+	font-family: "ff-cocon-web-pro";
+	margin: 0;
+	margin-bottom: -96px;
+	padding-right: 88px;
+	height: 96px;
+	font-size: 14px;
+	background-image: url('/images/header-background-mobile.png');
+	background-position: center;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+header h1
+{
+	max-width: 300px;
+	padding: 0 0 0 12px;
+	margin: 0;
+}
+
+header a
+{
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Navigation */
+
+nav i
+{
+	width: 48px;
+	height: 48px;
+	border-width: 2px;
+	border-style: solid;
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 8px;
+}
+
+#menu-toggle
+{
+	display: block;
+	margin: 22px 12px 22px auto;
+}
+
+#top-nav ul
+{
+	font-size: 16px;
+	font-weight: normal;
+	padding: 0 12px 0 12px;
+	display: flex;
+	flex-direction: column;
+}
+
+#top-nav li
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 8px 0 8px 0;
+}
+
+.hidden
+{
+	display: none !important;
+}
+
+#hrHack /* Temporary hack to make the initial HR element disappear on mobile - long term need to remove the HRs! */
+{
+	display: none; 
+}
+
+/* Desktop View Overrides */
+
+@media only screen and (min-width: 660px)
+{
+	.hidden
+	{
+		display: flex !important;
+	}
+
+	#hrHack
+	{
+		display: block;
+	}
+
+	/* Page Header */
+
+	header
+	{
+		height: 212px;
+		margin: 0;
+		padding: 0;
+		background-image: url('/images/header-background.png');
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	header h1
+	{
+		font-size: 64px;
+		text-align: center;
+		margin-right: auto;
+		margin-left: auto;
+		max-width: 640px;
+	}
+
+	/* Navigation */
+
+	#menu-toggle /* Hide hamburger button in desktop view */
+	{
+		display: none;
+	}
+
+	#top-nav ul
+	{
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	#top-nav li
+	{
+		padding: 0 8px 0 8px;
+	}
+}

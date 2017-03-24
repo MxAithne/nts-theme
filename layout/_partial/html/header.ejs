@@ -14,7 +14,7 @@
 	var title = [];
 	if (page.current > 1) title.push(__('page', page.current));
 	if (page.title) title.push(page.title);
-	if (page.category) title.push(page.category);
+	if (page.category) title.push(titlecase(page.category.replace("-", " ")));
 	if (page.tag) title.push(page.tag);
 	if (page.archive)
 	{
@@ -26,6 +26,8 @@
 	<title><%= title.join(' - ') %></title>
 
 	<!-- Custom CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="https://cdn.materialdesignicons.com/1.7.22/css/materialdesignicons.min.css">
 	<%- css('css/style.css') %>
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

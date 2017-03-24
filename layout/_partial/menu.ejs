@@ -1,14 +1,12 @@
-<!-- Navigation -->
-<nav>
-    <a href="<%- config.root %>"><%- theme.menu_title || config.title || "" %></a>
+<!-- Site Top Navigation -->
 
-    <ul>
-        <% for (var i in theme.menu){ %>
-            <li>
-                <a href="<%- theme.menu[i].url ? url_for(theme.menu[i].url) : url_for(theme.menu[i]) %>">
-                    <%= i %>
-                </a>
-            </li>
-        <% } %>
-    </ul>
+<nav id="top-nav" class="page-width page-centre">
+	<i id="menu-toggle" class="mdi mdi-menu mdi-48px"></i>
+	<ul class="hidden">
+		<% for (var i in theme.menu){ %>
+			<li>
+				<a href="<%- theme.menu[i].url ? url_for(theme.menu[i].url) : url_for(theme.menu[i]) %>"><%= i %></a>
+			</li>
+		<% } %>
+	</ul>
 </nav>
