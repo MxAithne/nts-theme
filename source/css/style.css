@@ -5,6 +5,18 @@ body
 	font-family: "ff-netto-web";
 	min-width: 320px;
 	line-height: 1.5;
+	background: antiquewhite;
+}
+
+article, main
+{
+	min-height: 640px;
+}
+
+a
+{
+	text-decoration: none;
+	color: mediumslateblue;
 }
 
 .page-width
@@ -99,6 +111,13 @@ nav i
 	padding: 8px 0 8px 0;
 }
 
+.inline-image-right
+{
+	width: 240px;
+	margin: auto;
+	display: block;
+}
+
 .hidden
 {
 	display: none !important;
@@ -160,5 +179,10 @@ nav i
 	#top-nav li
 	{
 		padding: 0 8px 0 8px;
+	}
+
+	.inline-image-right
+	{
+		float: right;
 	}
 }

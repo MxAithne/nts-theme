@@ -1,11 +1,11 @@
 <%
-    var title = '';
-    if (page.category) title = page.category;
-    if (page.tag) title = "#" + page.tag;
-    if (page.archive) {
-        if (page.year) title = page.year + (page.month ? '/' + page.month : '');
-        else title = __('archive_a');
-    }
+	var title = '';
+	if (page.category) title = page.category;
+	if (page.tag) title = "#" + page.tag;
+	if (page.archive) {
+		if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+		else title = __('archive_a');
+	}
 %>
 
 <!-- Main Content -->
@@ -14,9 +14,11 @@
 <h1 class="page-width page-centre"><%- titlecase(page.category.replace("-", " ")) %></h1>
 
 <main class="page-width page-centre post-list">
-	<% page.posts.each(function(item){ %>
-	    <%- partial('_partial/content-list', {item: item}) %>
-	<% }); %>
+	<ul>
+		<% page.posts.each(function(item){ %>
+			<%- partial('_partial/content-list', {item: item}) %>
+		<% }); %>
+	</ul>
 </main>
 
 <!-- Paginator -->

@@ -2,8 +2,24 @@
 <!-- jQuery -->
 <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 
+<!-- enquire.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/enquire.js/2.1.6/enquire.min.js"></script>
+
 <script>
 $(function () {
+
+	// Code to allow images that are floated right in desktop view to appear after the text in mobile
+	enquire.register("screen and (min-width: 660px)", {
+		match: function () {
+			// Take the image and move it in front of the preceding element
+			$(".inline-image-right").parent().prev().before($(".inline-image-right").parent())
+		},
+		unmatch: function () {
+			// Take the image and move it in front of the following element
+			$(".inline-image-right").parent().next().after($(".inline-image-right").parent())
+		}
+	});
+
 	$('#menu-toggle').on("click", function ()
 	{
 		$('#top-nav ul').toggleClass("hidden");
