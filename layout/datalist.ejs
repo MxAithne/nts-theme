@@ -1,0 +1,21 @@
+<!-- Datalist Layout -->
+
+<article class="page-width page-centre article-height">
+
+	<%- page.content %>
+
+	<% for (var item in site.data.sessions) { %>
+			
+		<h3 class="session-title"><%- site.data.sessions[item].title %></h3>
+		
+		<span class="session-time">Time: <%- site.data.sessions[item].minduration %>
+		<% if (site.data.sessions[item].minduration-site.data.sessions[item].maxduration != 0) { %>
+			to <%- site.data.sessions[item].maxduration %>
+		<% } %>
+		minutes</span>
+		
+		<p class="session-description"><%- site.data.sessions[item].description %></p>
+
+	<% } %>
+
+</article>

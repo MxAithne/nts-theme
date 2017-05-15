@@ -11,7 +11,7 @@
 <!-- Main Content -->
 <!-- This is used to generate lists from tags and categories. -->
 
-<h1 class="page-width page-centre"><%- titlecase(page.category.replace("-", " ")) %></h1>
+<h1 class="page-width page-centre"><%- page.category ? titlecase(page.category.replace("-", " ")) : ''%></h1>
 
 <main class="page-width page-centre post-list">
 	<ul>
