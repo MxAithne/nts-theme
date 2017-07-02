@@ -48,6 +48,11 @@ a
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', endColorstr='#0000ff',GradientType=1 ); /* IE6-9 */
 }
 
+strong
+{
+	font-weight: bold;
+}
+
 /* Page Header */
 
 header
@@ -206,7 +211,8 @@ footer
 {
 	padding-top: 10px;
 	padding-bottom: 10px;
-	text-align: right;
+	justify-content: space-between;
+  display: flex;
 }
 
 /* Desktop View Overrides */

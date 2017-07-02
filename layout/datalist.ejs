@@ -4,17 +4,17 @@
 
 	<%- page.content %>
 
-	<% for (var item in site.data.sessions) { %>
+	<% for (var item in site.data.activities) { %>
 			
-		<h3 class="session-title"><%- site.data.sessions[item].title %></h3>
+		<h4 class="session-title"><%- site.data.activities[item].title %></h3>
 		
-		<span class="session-time">Time: <%- site.data.sessions[item].minduration %>
-		<% if (site.data.sessions[item].minduration-site.data.sessions[item].maxduration != 0) { %>
-			to <%- site.data.sessions[item].maxduration %>
+		<span class="session-time">Time: <%- site.data.activities[item].minduration %>
+		<% if (site.data.activities[item].minduration-site.data.activities[item].maxduration != 0) { %>
+			to <%- site.data.activities[item].maxduration %>
 		<% } %>
 		minutes</span>
 		
-		<p class="session-description"><%- site.data.sessions[item].description %></p>
+		<p class="session-description"><%- site.data.activities[item].description %></p>
 
 	<% } %>
 
