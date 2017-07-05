@@ -53,6 +53,11 @@ strong
 	font-weight: bold;
 }
 
+.clear-fix
+{
+	clear: both;
+}
+
 /* Page Header */
 
 header
@@ -205,6 +210,21 @@ nav i
 	margin-top: 0;
 }
 
+.site-icon
+{
+	font-size: xx-large;
+}
+
+#session-icons > div
+{
+  display: inline;
+}
+
+#session-icons
+{
+	/*display: none;*/
+}
+
 /* Page Footer */
 
 footer
@@ -296,17 +316,25 @@ footer
 	.session-title
 	{
 		margin-bottom: 0;
-	}
-
-	.session-time
-	{
-		float: right;
-	  margin-top: -1.17em;
+		clear: both;
 	}
 
 	.session-description
 	{
 		margin-top: 0;
+	}
+	
+	#session-icons
+	{
+	  float: right;
+    margin-top: -2em;
+    margin-bottom: 2em;
+    min-width: 145px;
+  }
+
+  #session-icons > div 
+  {
+  	display: block;
 	}
 
 }

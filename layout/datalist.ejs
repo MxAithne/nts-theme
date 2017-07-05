@@ -5,16 +5,73 @@
 	<%- page.content %>
 
 	<% for (var item in site.data.activities) { %>
-			
-		<h4 class="session-title"><%- site.data.activities[item].title %></h3>
+		<% if (site.data.activities[item].available) { %>	
+
+			<h4 class="session-title clear-fix"><%- site.data.activities[item].title %></h4>
+
+			<div id="session-icons">
+				<div id="session-type-duration">
+					<span id="session-type">
+						<% if (site.data.activities[item].type == "social") { %>
+							<span title="Social"><i class="site-icon icon-social"></i></span>
+						<% } %>
+						<% if (site.data.activities[item].type == "educational") { %>
+							<span title="Educational Session"><i class="site-icon icon-educational"></i></span>
+						<% } %>
+						<% if (site.data.activities[item].type == "intimate") { %>
+							<span title="Intimate Session"><i class="site-icon icon-intimate"></i></span>
+						<% } %>
+					</span>
+
+					<span id="session-duration">
+						<% if (site.data.activities[item].duration == "short") { %>
+							<span title="Minimum Duration: Short"><i class="site-icon icon-short"></i></span>
+						<% } %>
+						<% if (site.data.activities[item].duration == "medium") { %>
+							<span title="Minimum Duration: Medium"><i class="site-icon icon-medium"></i></span>
+						<% } %>
+						<% if (site.data.activities[item].duration == "long") { %>
+							<span title="Minimum Duration: Long"><i class="site-icon icon-long"></i></span>
+						<% } %>
+					</span>
+				</div>
+
+					<div id="session-location">
+						<% for (var loc in site.data.activities[item].location) { %>
+							<% if (site.data.activities[item].location[loc] == "in") { %>
+								<span title="Available as an In Call"><i class="site-icon icon-incalls"></i></span>
+							<% } %>
+							<% if (site.data.activities[item].location[loc] == "hotel") { %>
+								<span title="Available as a Hotel Session"><i class="site-icon icon-hotel"></i></span>
+							<% } %>
+							<% if (site.data.activities[item].location[loc] == "out") { %>
+								<span title="Available as an Out Call"><i class="site-icon icon-outcalls"></i></span>
+							<% } %>
+							<% if (site.data.activities[item].location[loc] == "special") { %>
+								<span title="Available by Special Arrangement Only"><i class="site-icon icon-special"></i></span>
+							<% } %>
+						<% } %>
+					</div>
+
+					<div id="session-direction">
+						<% for (var dir in site.data.activities[item].direction) { %>
+							<% if (site.data.activities[item].direction[dir] == "give") { %>
+								<span title="This is a _ activity"><i class="site-icon icon-giving"></i></span>
+							<% } %>
+							<% if (site.data.activities[item].direction[dir] == "both") { %>
+								<span title="This is a _ activity"><i class="site-icon icon-interactive"></i></span>
+							<% } %>
+							<% if (site.data.activities[item].direction[dir] == "recieve") { %>
+								<span title="This is a receptive activity"><i class="site-icon icon-receptive"></i></span>
+							<% } %>
+						<% } %>
+					</div>
+				</div>
+			</div>
+
+			<p class="session-description"><%- site.data.activities[item].description %></p>
 		
-		<span class="session-time">Time: <%- site.data.activities[item].minduration %>
-		<% if (site.data.activities[item].minduration-site.data.activities[item].maxduration != 0) { %>
-			to <%- site.data.activities[item].maxduration %>
 		<% } %>
-		minutes</span>
-		
-		<p class="session-description"><%- site.data.activities[item].description %></p>
 
 	<% } %>
 
