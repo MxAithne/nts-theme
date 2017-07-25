@@ -2,11 +2,11 @@
 
 body
 {
-	font-family: "sofia-pro-soft", sans-serif;
+	font-family: "quicksand", sans-serif;
 	font-weight: lighter;
 	min-width: 320px;
 	line-height: 1.5;
-	background: antiquewhite;
+	background: white;
 	font-size: 18px;
 }
 
@@ -63,14 +63,14 @@ strong
 header
 {
 	line-height: 1;
-	font-family: "coquette";
+	font-family: "quicksand";
 	font-weight: bold;
 	font-size: 14px;
 	margin: 0;
 	margin-bottom: -96px;
 	padding-right: 88px;
 	height: 96px;
-	background-image: url('/images/header-background-mobile.png');
+	background-image: url('/images/header-mobile.png');
 	background-position: center;
 	display: flex;
 	flex-direction: row;
@@ -256,7 +256,7 @@ footer
 		height: 212px;
 		margin: 0;
 		padding: 0;
-		background-image: url('/images/header-background.png');
+		background-image: url('/images/header-desktop.png');
 		background-position: center;
 		background-repeat: no-repeat;
 	}

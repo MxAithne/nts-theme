@@ -1,9 +1,9 @@
 # Header
 menu:
 	Home: /
-	Sessions: /sessions
-	Why Unconventional Intimacy: /why-unconventional-intimacy
-	Queer Theory: /queer-theory
+	Details: /details
+	Accessibility: /access
+	Contact: /contact
 
 # URL of the Home page image
 title-background: /images/title.jpg
